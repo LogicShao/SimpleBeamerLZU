@@ -1,6 +1,20 @@
 \ProvidesClass{ldr-simple-gray}[2022/04/23 v1.00 yuhldr yuhldr@qq.com]
 \NeedsTeXFormat{LaTeX2e}
 
+% 定义比例选项
+\DeclareOption{aspectratio43}{
+  \PassOptionsToClass{aspectratio=43}{ctexbeamer}
+}
+\DeclareOption{aspectratio169}{
+  \PassOptionsToClass{aspectratio=169}{ctexbeamer}
+}
+\DeclareOption{aspectratio1610}{
+  \PassOptionsToClass{aspectratio=1610}{ctexbeamer}
+}
+% 默认比例为4:3
+\ExecuteOptions{aspectratio43}
+\ProcessOptions\relax
+
 \LoadClass{ctexbeamer}
 
 \RequirePackage{fontspec}
